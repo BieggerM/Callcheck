@@ -17,10 +17,8 @@ public class SaveServiceImpl implements SaveService {
     }
 
     @Override
-    public void saveRequest(HttpServletRequest httpCall, HttpEntity<String> payload){
-        if (payload.getBody().length()<100) {
-            Request request = new Request(httpCall.getRequestURI(), httpCall.getMethod(), payload.getBody());
+    public void saveRequest(HttpServletRequest httpCall, HttpEntity<String> payload, String id){
+            Request request = new Request(httpCall.getRequestURI(), httpCall.getMethod(), payload.getBody(), id);
             requestRepository.save(request);
-        }
     }
 }

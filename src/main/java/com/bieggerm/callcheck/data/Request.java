@@ -25,11 +25,12 @@ public class Request {
     private LocalTime time;
     private String sessionId;
 
-    public Request(String uri, String requestType, String payload){
+    public Request(String uri, String requestType, String payload, String sessionId){
         this.uri = uri;
         this.requestType = requestType;
         this.payload = payload;
         this.time = LocalTime.now();
+        this.sessionId = sessionId;
     }
 
     public Request() {

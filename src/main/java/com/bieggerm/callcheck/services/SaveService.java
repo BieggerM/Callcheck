@@ -5,5 +5,5 @@ import org.springframework.http.HttpEntity;
 import javax.servlet.http.HttpServletRequest;
 
 public interface SaveService {
-    void saveRequest(HttpServletRequest request, HttpEntity<String> httpEntity);
+    void saveRequest(HttpServletRequest request, HttpEntity<String> httpEntity, String id);
 }
